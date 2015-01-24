@@ -1,5 +1,8 @@
 = Rules for Ultimate Tic-Tac-Toe =
 
+== Introduction ==
+Ultimate TicTacToe is essentially many games being played simultanously
+
 == Goal ==
 
 
