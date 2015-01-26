@@ -1,0 +1,11 @@
+
+# Document Rules for Ultimate tictactoe - *started*
+# Create Restful API server to host a single game of regular tictactoe - not started
+# Create dumb client to play regular tictactoe (dumb, meaning no strategy other than picking a valid square in turn) - not started
+# V0 Milestone - a simple game can be started and finished with two clients running simultaneously.
+# Set up registered users (new users are given a key to use when making moves in their game). This is the first version to use db storage.
+# Set up game tracking in the db including game id, game players, winner (or 'draw' or 'in progress'), list of moves, in order, for the game.
+# V1 Milestone - records of a round-robin tournament of 5 separate clients playing regular tictactoe can be tracked and displayed.
+# Update API to play Ultimate tictactoe
+# Update dumb client to play Ultimate tictactoe
+# V2 Milestone - records of a round-robin tournament of 5 separate clients playing ultimate tictactoe can be tracked and displayed.
