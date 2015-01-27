@@ -1,3 +1,2 @@
-
- - https://docs.oracle.com/cd/E19776-01/820-4867/index.html
+ - https://docs.oracle.com/cd/E19776-01/820-4867/index.html<br>
  - http://gafferongames.com/
