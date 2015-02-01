@@ -34,6 +34,9 @@ For example, the previous player chose from the 'larger' tictactoe board, the ce
 Eventually, one of the smaller tictactoe games will be won by one of the players (or will be a draw). When this happens, the larger square is 'out of play'. Additionally, a mark is put on that larger square to indicate that it is either won by player 'X' or 'O' or that it was a draw. This is marked by a '-'.
 
 === Moving when your tictactoe board is out of play ===
-
+If, based on the prior move, the next move is in a square that is 'out of play', then the next move can be made in any square that is not 'out of play'
 
 == Winning ==
+When the winner of larger squares form a winning move with respect to the larger tictactoe board, the game is over.
+
+(need image samples)
