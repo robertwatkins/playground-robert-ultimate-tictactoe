@@ -1,0 +1,32 @@
+These patterns will have the following behaviors
+
+----
+*/games*
+
+Returns the list of games played
+
+TODO:what if there are lots of games? is there some pagination model?
+----
+*/game/XXXXXX*
+
+Returns the details of the game specified by XXXXXX 
+
+TODO:what details?
+TODO:what is the format of the id?
+----
+*/game/XXXXXX/moves*
+
+Returns all the moves for the game specified by XXXXXX
+
+----
+*/players*
+
+Returns all players that have registered in the system.
+
+----
+*/player/XXXXXX*
+
+Returns details of the registered player specified by XXXXXX
+
+TODO:what details?
+TODO:what is the format of the id?
