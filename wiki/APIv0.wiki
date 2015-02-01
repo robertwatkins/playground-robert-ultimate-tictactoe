@@ -5,7 +5,8 @@ These patterns will have the following behaviors
 
 Returns the list of games played
 
-TODO:what if there are lots of games? is there some pagination model?
+TODO:what if there are lots of games? 
+TODO:is there some pagination model?
 ----
 */game/XXXXXX*
 
