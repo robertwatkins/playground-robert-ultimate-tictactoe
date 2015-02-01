@@ -1,0 +1,5 @@
+These are the tools and configuration used for this project:
+ * Eclipse (though other IDEs may work)
+ * Tomcat (though other J2EE servers may work)
+ * Maven client
+ * more?
