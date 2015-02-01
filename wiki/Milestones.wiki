@@ -1,4 +1,5 @@
  # Document Rules for Ultimate tictactoe - *started*
+ # Document Restful API functionality
  # Create Restful API server to host a single game of regular tictactoe - not started 
  # Create dumb client to play regular tictactoe (dumb, meaning no strategy other than picking a valid square in turn) - not started
  # V0 Milestone - a simple game can be started and finished with two clients running simultaneously. - not started 
