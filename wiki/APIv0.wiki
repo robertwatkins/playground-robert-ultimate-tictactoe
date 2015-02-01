@@ -1,3 +1,7 @@
+
+TODO: This doesn't follow the Rest API pattern very well. Need to read more Rest API examples.
+
+
 These patterns will have the following behaviors
 
 ----
