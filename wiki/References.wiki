@@ -7,3 +7,7 @@ For node.js envrionment
  * download and install node.js http://nodejs.org/download/
  * install rest-tool  `sudo npm install -g rest-tool`
  * install mocha (test tool) `sudo npm install -g mocha`
+
+helpful rest-tool items
+ * rest-tool docs --update
+ * rest-tool test --update
