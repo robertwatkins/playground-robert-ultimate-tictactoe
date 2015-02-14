@@ -83,19 +83,15 @@ TODO:what is the format of the id?
 
 *Request Parameters*
 _Required:_
-
+id:
+Example:<br/>
+|| 'http://localhost:3007/rest/games?id=090210' ||
 _Optional:_
 
 *Response*
-Creates new game specified by XXXXXX 
-<table border="1"><tr><td><pre>
-{"games": {
-   "305710":"/games/305710",
-   "150103":"/games/150103",
-   "555211":"/games/555211"
-   }
-}
-</pre></td></tr></table>
+TBD
+
+
 TODO:what details?<br>
 TODO:what is the format of the id?
 
@@ -111,32 +107,24 @@ _Optional:_
 *Response*
 Returns the moves of the game specified by XXXXXX 
 <table border="1"><tr><td><pre>
-{"games": {
-   "305710":"/games/305710",
-   "150103":"/games/150103",
-   "555211":"/games/555211"
-   }
-}
-</pre></td></tr></table>
-TODO:what details?<br>
-TODO:what is the format of the id?
-
-----
-|| *Path* || *Method*||
-||/games/XXXXXX/moves/XX || GET ||
-
-*Request Parameters*
-_Required:_
-
-_Optional:_
-
-*Response*
-Returns the details of the move XX in the game specified by XXXXXX 
-<table border="1"><tr><td><pre>
-{"games": {
-   "305710":"/games/305710",
-   "150103":"/games/150103",
-   "555211":"/games/555211"
+{"game":
+   {
+     "id":"305710",
+     "moves": [
+       {
+         "moveNum":1,
+         "player":"X",
+         "move":"center"
+       },{
+         "moveNum":2,
+         "player":"O",
+         "move":"upper-left"
+       },{
+         "moveNum":3,
+         "player":"X",
+         "move":"upper-right"
+       }
+     ]
    }
 }
 </pre></td></tr></table>
@@ -149,19 +137,17 @@ TODO:what is the format of the id?
 
 *Request Parameters*
 _Required:_
+XX: this is the move number being set
+player: Specify the mark of the player taking their turn
+move: Specify the location of the move
+Example:<br/>
+|| 'http://localhost:3007/rest/games/090210/moves/4?player="O"&move="top-center"' ||
 
 _Optional:_
-
+none
 *Response*
-Sets the details of the move XX in the game specified by XXXXXX 
-<table border="1"><tr><td><pre>
-{"games": {
-   "305710":"/games/305710",
-   "150103":"/games/150103",
-   "555211":"/games/555211"
-   }
-}
-</pre></td></tr></table>
+TBD
+
 TODO:what details?<br>
 TODO:what is the format of the id?
 ----
@@ -176,11 +162,15 @@ _Optional:_
 *Response*
 Returns a link to both the 'X' player and the 'O' player
 <table border="1"><tr><td><pre>
-{"games": {
-   "305710":"/games/305710",
-   "150103":"/games/150103",
-   "555211":"/games/555211"
+{"players": [
+   {
+   "player":"X",
+   "href":"http://localhost:3007/rest/players/X",
+   },{
+   "player":"O",
+   "href":"http://localhost:3007/rest/players/O",
    }
+   ]
 }
 </pre></td></tr></table>
 
@@ -196,11 +186,21 @@ _Optional:_
 *Response*
 Returns details of the registered player specified by XXXXXX
 <table border="1"><tr><td><pre>
-{"games": {
-   "305710":"/games/305710",
-   "150103":"/games/150103",
-   "555211":"/games/555211"
+{"player": [
+   {
+   "playerMark":"X",
+   "gamesPlayed": 40,
+   "playedGameList": ["10101","13990"...],
+   "gamesWon": 10,
+   "wonGameList": ["90210","33822",...],
+   "gamesLost": 10,
+   "lostGameList": ["38020","010948",...],
+   "catGame": 10,
+   "catGameList": ["39100","94022",...],
+   "forfietGame": 0,
+   "forfeitGameList": ["05553","42029",...] 
    }
+   ]
 }
 </pre></td></tr></table>
 TODO:what details?<br>
