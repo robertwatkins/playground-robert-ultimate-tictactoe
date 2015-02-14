@@ -34,7 +34,7 @@ TODO:what is the format of the id?
 
 ----
 || *Path* || *Method*||
-||/games/XXXXXX || GET ||
+||/games/XXXXXX || POST ||
 
 *Request Parameters*
 _Required:_
@@ -42,14 +42,14 @@ _Required:_
 _Optional:_
 
 *Response*
-Returns the details of the game specified by XXXXXX 
+Creates new game specified by XXXXXX 
 || '  '||
 TODO:what details?<br>
 TODO:what is the format of the id?
 
 ----
 || *Path* || *Method*||
-||/games/XXXXXX/moves || POST ||
+||/games/XXXXXX/moves || GET ||
 
 *Request Parameters*
 _Required:_
@@ -57,11 +57,40 @@ _Required:_
 _Optional:_
 
 *Response*
-Returns the details of the game specified by XXXXXX 
+Returns the moves of the game specified by XXXXXX 
 || '  '||
 TODO:what details?<br>
 TODO:what is the format of the id?
 
+----
+|| *Path* || *Method*||
+||/games/XXXXXX/moves/XX || GET ||
+
+*Request Parameters*
+_Required:_
+
+_Optional:_
+
+*Response*
+Returns the details of the move XX in the game specified by XXXXXX 
+|| '  '||
+TODO:what details?<br>
+TODO:what is the format of the id?
+
+----
+|| *Path* || *Method*||
+||/games/XXXXXX/moves/XX || POST ||
+
+*Request Parameters*
+_Required:_
+
+_Optional:_
+
+*Response*
+Sets the details of the move XX in the game specified by XXXXXX 
+|| '  '||
+TODO:what details?<br>
+TODO:what is the format of the id?
 ----
 || *Path* || *Method*||
 ||/players || GET ||
