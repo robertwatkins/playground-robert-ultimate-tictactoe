@@ -4,7 +4,7 @@ v0 is for the basic tictactoe game.
 || *Path* || *Method*||
 ||/games || GET ||
 
-*Request Parameters*
+*Request Parameters*<br/>
 _Required:_
 none
 
@@ -17,11 +17,18 @@ Returns the list of games played
 _Sample_
 
 <table border="1"><tr><td><pre>
-{"games": {
-   "305710":"/games/305710",
-   "150103":"/games/150103",
-   "555211":"/games/555211"
+{"games": [
+   {
+     "id":"305710",
+     "href":"http://localhost:3007/rest/games/305710"
+   },{
+     "id": "150103",
+     "href": "http://localhost:3007/rest/games/150103",
+   },{
+     "id": "555211",
+     "href": "http://localhost:3007/rest/games/555211"
    }
+   ]
 }
 </pre></td></tr></table>
 
@@ -31,7 +38,7 @@ is there some pagination model?
 || *Path* || *Method*||
 ||/games/XXXXXX || GET ||
 
-*Request Parameters*
+*Request Parameters*<br/>
 _Required:_
 
 _Optional:_
@@ -39,8 +46,8 @@ _Optional:_
 *Response*
 Returns the details of the game specified by XXXXXX 
 <table border="1"><tr><td><pre>
-{"games": {
-   "305710":"/games/305710",
+{"game": {
+   ""305710":"/games/305710",
    "150103":"/games/150103",
    "555211":"/games/555211"
    }
