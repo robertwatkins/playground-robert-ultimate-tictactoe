@@ -1,37 +1,91 @@
-
 TODO: This doesn't follow the Rest API pattern very well. Need to read more Rest API examples.
 
-
-These patterns will have the following behaviors
-
 ----
-*/games*
+|| *Path* || *Method*||
+||/games || GET ||
 
+*Request Parameters*
+_Required:_
+none
+
+_Optional:_
+none
+
+*Response*
 Returns the list of games played
+|| '  ' ||
 
 TODO:what if there are lots of games? <br>
-TODO:is there some pagination model?
+is there some pagination model?
 ----
-*/game/XXXXXX*
+|| *Path* || *Method*||
+||/games/XXXXXX || GET ||
 
+*Request Parameters*
+_Required:_
+
+_Optional:_
+
+*Response*
 Returns the details of the game specified by XXXXXX 
-
+|| '  '||
 TODO:what details?<br>
 TODO:what is the format of the id?
-----
-*/game/XXXXXX/moves*
-
-Returns all the moves for the game specified by XXXXXX
 
 ----
-*/players*
+|| *Path* || *Method*||
+||/games/XXXXXX || GET ||
 
-Returns all players that have registered in the system.
+*Request Parameters*
+_Required:_
+
+_Optional:_
+
+*Response*
+Returns the details of the game specified by XXXXXX 
+|| '  '||
+TODO:what details?<br>
+TODO:what is the format of the id?
 
 ----
-*/player/XXXXXX*
+|| *Path* || *Method*||
+||/games/XXXXXX/moves || POST ||
 
+*Request Parameters*
+_Required:_
+
+_Optional:_
+
+*Response*
+Returns the details of the game specified by XXXXXX 
+|| '  '||
+TODO:what details?<br>
+TODO:what is the format of the id?
+
+----
+|| *Path* || *Method*||
+||/players || GET ||
+
+*Request Parameters*
+_Required:_
+
+_Optional:_
+
+*Response*
+Returns a link to both the 'X' player and the 'O' player
+|| '  '||
+
+----
+|| *Path* || *Method*||
+||/players/[X|O] || GET ||
+
+*Request Parameters*
+_Required:_
+
+_Optional:_
+
+*Response*
 Returns details of the registered player specified by XXXXXX
-
+|| '  '||
 TODO:what details?<br>
 TODO:what is the format of the id?
