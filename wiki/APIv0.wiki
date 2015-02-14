@@ -1,4 +1,4 @@
-TODO: This doesn't follow the Rest API pattern very well. Need to read more Rest API examples.
+v0 is for the basic tictactoe game.
 
 ----
 || *Path* || *Method*||
@@ -13,7 +13,17 @@ none
 
 *Response*
 Returns the list of games played
-|| '  ' ||
+
+_Sample_
+
+<table border="1"><tr><td><pre>
+{"games": {
+   "305710":"/games/305710",
+   "150103":"/games/150103",
+   "555211":"/games/555211"
+   }
+}
+</pre></td></tr></table>
 
 TODO:what if there are lots of games? <br>
 is there some pagination model?
@@ -28,7 +38,14 @@ _Optional:_
 
 *Response*
 Returns the details of the game specified by XXXXXX 
-|| '  '||
+<table border="1"><tr><td><pre>
+{"games": {
+   "305710":"/games/305710",
+   "150103":"/games/150103",
+   "555211":"/games/555211"
+   }
+}
+</pre></td></tr></table>
 TODO:what details?<br>
 TODO:what is the format of the id?
 
@@ -43,7 +60,14 @@ _Optional:_
 
 *Response*
 Creates new game specified by XXXXXX 
-|| '  '||
+<table border="1"><tr><td><pre>
+{"games": {
+   "305710":"/games/305710",
+   "150103":"/games/150103",
+   "555211":"/games/555211"
+   }
+}
+</pre></td></tr></table>
 TODO:what details?<br>
 TODO:what is the format of the id?
 
@@ -58,7 +82,14 @@ _Optional:_
 
 *Response*
 Returns the moves of the game specified by XXXXXX 
-|| '  '||
+<table border="1"><tr><td><pre>
+{"games": {
+   "305710":"/games/305710",
+   "150103":"/games/150103",
+   "555211":"/games/555211"
+   }
+}
+</pre></td></tr></table>
 TODO:what details?<br>
 TODO:what is the format of the id?
 
@@ -73,7 +104,14 @@ _Optional:_
 
 *Response*
 Returns the details of the move XX in the game specified by XXXXXX 
-|| '  '||
+<table border="1"><tr><td><pre>
+{"games": {
+   "305710":"/games/305710",
+   "150103":"/games/150103",
+   "555211":"/games/555211"
+   }
+}
+</pre></td></tr></table>
 TODO:what details?<br>
 TODO:what is the format of the id?
 
@@ -88,7 +126,14 @@ _Optional:_
 
 *Response*
 Sets the details of the move XX in the game specified by XXXXXX 
-|| '  '||
+<table border="1"><tr><td><pre>
+{"games": {
+   "305710":"/games/305710",
+   "150103":"/games/150103",
+   "555211":"/games/555211"
+   }
+}
+</pre></td></tr></table>
 TODO:what details?<br>
 TODO:what is the format of the id?
 ----
@@ -102,7 +147,14 @@ _Optional:_
 
 *Response*
 Returns a link to both the 'X' player and the 'O' player
-|| '  '||
+<table border="1"><tr><td><pre>
+{"games": {
+   "305710":"/games/305710",
+   "150103":"/games/150103",
+   "555211":"/games/555211"
+   }
+}
+</pre></td></tr></table>
 
 ----
 || *Path* || *Method*||
@@ -115,6 +167,13 @@ _Optional:_
 
 *Response*
 Returns details of the registered player specified by XXXXXX
-|| '  '||
+<table border="1"><tr><td><pre>
+{"games": {
+   "305710":"/games/305710",
+   "150103":"/games/150103",
+   "555211":"/games/555211"
+   }
+}
+</pre></td></tr></table>
 TODO:what details?<br>
 TODO:what is the format of the id?
