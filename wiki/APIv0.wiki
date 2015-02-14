@@ -40,16 +40,37 @@ is there some pagination model?
 
 *Request Parameters*<br/>
 _Required:_
+XXXXXX = this is the id of the game
 
 _Optional:_
+- playersMove<br/>
+Example: to find which player has the next move for game 59599. 
+|| 'http://localhost:3007/rest/games/59599?playersMove' ||
+- gameStatus<br/>
+Example: to find which player has won game 59599 (or if it is in progress, or a 'cat'). 
+|| 'http://localhost:3007/rest/games/59599?playersMove' ||
 
 *Response*
 Returns the details of the game specified by XXXXXX 
 <table border="1"><tr><td><pre>
-{"game": {
-   ""305710":"/games/305710",
-   "150103":"/games/150103",
-   "555211":"/games/555211"
+{"game":
+   {
+     "id":"305710",
+     "playersMove": "X",
+     "gameStatus": "In Progress",
+     "validMoves": ["center","upper-left","center-right"],
+     "currentBoard": [
+       {
+       "upper-left":"",
+       "top-center":"X",
+       "upper-right":"O",
+       "center-left":"X",
+       "center": "",
+       "center-right": "",
+       "lower-left": "O",
+       "bottom-center": "X",
+       "lower-right": "O"
+     ]
    }
 }
 </pre></td></tr></table>
