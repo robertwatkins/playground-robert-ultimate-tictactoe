@@ -13,13 +13,21 @@ Setup demo project (after install steps above)
 {{{
 rest-tool create demo-project
 cd demo-project
-npm install
+sudo npm install
 rest-tool add -t COLLECTION -p games -u /games -n Games -d "A service to manage the collection of games"
+#these lines change 'games' to '/games' in the config.yml file. 
+cp config.yml config.yml.bak
+sudo sed 's/games/\/games/gpw config.yml' config.yml.bak
+
 
 rest-tool docs --update
 rest-tool test --update
 node server/server.js
 }}}
+
+Check out the work so far:
+http://localhost:3007/rest/games
+
 helpful rest-tool items
  *  || rest-tool docs --update || 
  *  || rest-tool test --update || 
