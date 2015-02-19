@@ -17,7 +17,7 @@ sudo npm install
 rest-tool add -t COLLECTION -p games -u /games -n Games -d "A service to manage the collection of games"
 #these lines change 'games' to '/games' in the config.yml file. 
 cp config.yml config.yml.bak
-sudo sed 's/games/\/games/gpw config.yml' config.yml.bak
+sudo sed 's/games/\/games/' config.yml.bak > config.yml
 
 
 rest-tool docs --update
