@@ -26,7 +26,8 @@ node server/server.js
 }}}
 
 Check out the work so far:
-http://localhost:3007/rest/games
+ * API - http://localhost:3007/rest/games
+ * Docs - http://localhost:3007/docs
 
 helpful rest-tool items
  *  || rest-tool docs --update || 
