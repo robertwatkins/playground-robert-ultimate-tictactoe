@@ -18,6 +18,8 @@ rest-tool add -t COLLECTION -p /games -u /games -n Games -d "A service to manage
 rest-tool add -t RESOURCE -p /games/game -u /games/{id} -n Game -d "A service to manage an individual game"
 rest-tool add -t COLLECTION -p /games/game/moves -u /games/{id}/moves -n Moves -d "A service to manage the collection of game moves"
 rest-tool add -t RESOURCE -p /games/game/moves/move -u /games/{id}/moves/{move} -n Move -d "A service to manage an individual game move"
+rest-tool add -t COLLECTION -p /players -u /players -n Players -d "A service to manage the collection of players"
+rest-tool add -t RESOURCE -p /players/player -u /players/{id} -n Player -d "A service to manage an individual player"
 
 rest-tool docs --update
 rest-tool test --update
@@ -29,6 +31,8 @@ Check out the work so far:
        - http://localhost:3007/rest/games/1/
        - http://localhost:3007/rest/games/1/moves
        - http://localhost:3007/rest/games/1/moves/1
+       - http://localhost:3007/rest/players
+       - http://localhost:3007/rest/players/X
  * Docs - http://localhost:3007/docs
 
 helpful rest-tool items
