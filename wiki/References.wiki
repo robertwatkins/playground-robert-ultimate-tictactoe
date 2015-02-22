@@ -14,11 +14,10 @@ Setup demo project (after install steps above)
 rest-tool create demo-project
 cd demo-project
 sudo npm install
-rest-tool add -t COLLECTION -p games -u /games -n Games -d "A service to manage the collection of games"
-#these lines change 'games' to '/games' in the config.yml file. 
-cp config.yml config.yml.bak
-sudo sed 's/games/\/games/' config.yml.bak > config.yml
-
+rest-tool add -t COLLECTION -p /games -u /games -n Games -d "A service to manage the collection of games"
+rest-tool add -t RESOURCE -p /games/game -u /games/{id} -n Game -d "A service to manage an individual game"
+rest-tool add -t COLLECTION -p /games/game/moves -u /games/{id}/moves -n Moves -d "A service to manage the collection of game moves"
+rest-tool add -t RESOURCE -p /games/game/moves/move -u /games/{id}/moves/{move} -n MOve -d "A service to manage an individual game move"
 
 rest-tool docs --update
 rest-tool test --update
@@ -27,6 +26,9 @@ node server/server.js
 
 Check out the work so far:
  * API - http://localhost:3007/rest/games
+       - http://localhost:3007/rest/games/1/
+       - http://localhost:3007/rest/games/1/moves
+       - http://localhost:3007/rest/games/1/moves/1
  * Docs - http://localhost:3007/docs
 
 helpful rest-tool items
