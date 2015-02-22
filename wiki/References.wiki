@@ -17,7 +17,7 @@ sudo npm install
 rest-tool add -t COLLECTION -p /games -u /games -n Games -d "A service to manage the collection of games"
 rest-tool add -t RESOURCE -p /games/game -u /games/{id} -n Game -d "A service to manage an individual game"
 rest-tool add -t COLLECTION -p /games/game/moves -u /games/{id}/moves -n Moves -d "A service to manage the collection of game moves"
-rest-tool add -t RESOURCE -p /games/game/moves/move -u /games/{id}/moves/{move} -n MOve -d "A service to manage an individual game move"
+rest-tool add -t RESOURCE -p /games/game/moves/move -u /games/{id}/moves/{move} -n Move -d "A service to manage an individual game move"
 
 rest-tool docs --update
 rest-tool test --update
