@@ -17,19 +17,16 @@ Returns the list of games played
 _Sample_
 
 <table border="1"><tr><td><pre>
-{"games": [
-   {
-     "id":"305710",
-     "href":"http://localhost:3007/rest/games/305710"
-   },{
-     "id": "150103",
-     "href": "http://localhost:3007/rest/games/150103",
-   },{
-     "id": "555211",
-     "href": "http://localhost:3007/rest/games/555211"
-   }
-   ]
-}
+[{
+    "id": "305710",
+    "href": "http://localhost:3007/rest/games/305710"
+}, {
+    "id": "150103",
+    "href": "http://localhost:3007/rest/games/150103"
+}, {
+    "id": "555211",
+    "href": "http://localhost:3007/rest/games/555211"
+}]
 </pre></td></tr></table>
 
 TODO:what if there are lots of games? <br>
@@ -162,16 +159,14 @@ _Optional:_
 *Response*
 Returns a link to both the 'X' player and the 'O' player
 <table border="1"><tr><td><pre>
-{"players": [
-   {
-   "player":"X",
-   "href":"http://localhost:3007/rest/players/X",
-   },{
-   "player":"O",
-   "href":"http://localhost:3007/rest/players/O",
-   }
-   ]
-}
+[{
+    "player":"X",
+    "href":"http://localhost:3007/rest/players/X"
+},{
+    "player":"O",
+    "href":"http://localhost:3007/rest/players/O"
+}]
+ 
 </pre></td></tr></table>
 
 ----
