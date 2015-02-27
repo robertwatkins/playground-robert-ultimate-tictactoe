@@ -1,0 +1,25 @@
+name: This service description has no test cases
+description: |
+    This is a text service.yml file, which makes sure that
+    the service loader will create an empty 'testCases' property
+    for every method, which has no test cases defined.
+uriTemplate: /defaults/noHeaders
+methods:
+    GET:
+        summary: This is a dummy GET method
+        responses:
+            -
+                name: OK
+                statusCode: &OkStatusCode 200
+                reason: &OkReason Successful execution
+        testCases:
+            -
+                name: Get the resource
+                description: Successfully retrieves the resource
+                url: /defaults/noHeaders
+                template: testGetMethod.mustache
+                request:
+                response:
+                    name: OK
+                    statusCode: *OkStatusCode
+                    reason: *OkReason

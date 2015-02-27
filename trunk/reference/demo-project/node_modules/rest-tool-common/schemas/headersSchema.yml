@@ -1,0 +1,26 @@
+id: "http://tombenke.github.io/rest-tool-common/schemas/headersSchema.yml#"
+$schema: "http://json-schema.org/draft-04/schema#"
+title: cookies
+description: Specification of the headers
+$ref: "#/definitions/headers"
+
+definitions:
+
+    headers:
+        id: "#headers"
+        description: Specification of the headers
+        type: array
+        items:
+            $ref: "#header"
+
+    header:
+        id: "#header"
+        description: Specification of one header
+        type: object
+        required: [field, content]
+        additionalProperties: false
+        properties:
+            field:
+                type: string
+            content:
+                type: string
