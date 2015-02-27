@@ -1,0 +1,19 @@
+ {"game":
+    {
+      "id":"305710",
+      "playersMove": "X",
+      "gameStatus": "In Progress",
+      "validMoves": ["center","upper-left","center-right"],
+      "currentBoard":{
+        "upper-left":"",
+        "top-center":"X",
+        "upper-right":"O",
+        "center-left":"X",
+        "center": "",
+        "center-right": "",
+        "lower-left": "O",
+        "bottom-center": "X",
+        "lower-right": "O"
+	  }
+    }
+ }

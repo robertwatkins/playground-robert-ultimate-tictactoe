@@ -1,0 +1,8 @@
+[{
+    "player":"X",
+    "href":"http://localhost:3007/rest/players/X"
+},{
+    "player":"O",
+    "href":"http://localhost:3007/rest/players/O"
+}]
+ 
