@@ -1,0 +1,19 @@
+projectName: "demo-project"
+apiVersion: v0.0.0
+author: TBD.
+licence: TBD.
+serviceUrlPrefix: /rest
+servicePort: 3007
+baseUrl: "http://localhost:3007/rest"
+servicesRoot: services
+services: 
+    - /monitoring/isAlive
+    - /games
+    - /games/game
+    - /games/game/moves
+    - /games/game/moves/move
+    - /players
+    - /players/player
+loginCredentials: 
+    user: username
+    pass: password
