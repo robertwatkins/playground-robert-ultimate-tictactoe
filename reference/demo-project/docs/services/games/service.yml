@@ -1,0 +1,113 @@
+name: Games service
+description:  |
+    A service to manage the collection of games
+style: COLLECTION
+uriTemplate: /games
+methods:
+    GET:
+        summary: List all the Games
+        notes: List all the Games
+        # implementation: api.getGames
+        request:
+            parameters: []
+            cookies: []
+            headers:
+                -
+                    field: Accept
+                    content: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+                -
+                    field: Accept-Encoding
+                    content: "gzip, deflate"
+        responses:
+            -
+                name: OK
+                statusCode: &OkStatusCode 200
+                reason: &OkReason Successful execution
+                # validationSchema: getCollection-responseBody-validationSchema.json
+                cookies: []
+                headers:
+                    -
+                        field: Content-Type
+                        content: application/json
+                mockBody: getCollection-responseBody.json
+        testCases:
+            -
+                name: Get Games
+                description: Successfully retrieves all the Games
+                url: /games
+                template: testGetMethod.mustache
+                request:
+                    cookies: []
+                    headers:
+                        -
+                            field : "Accept"
+                            content: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+                        -
+                            field: "Accept-Encoding"
+                            content: "gzip, deflate"
+                response:
+                    name: OK
+                    statusCode: *OkStatusCode
+                    reason: *OkReason
+                    cookies: []
+                    headers:
+                        -
+                            field: "Content-Type"
+                            content: "application/json"
+                    # validationSchema: getCollection-responseBody-validationSchema.json
+
+    POST:
+        summary: Create a new instance of Games
+        notes: Create a new instance Games
+        # implementation: api.postGames
+        uriTemplate: /games
+        request:
+            parameters: []
+            cookies: []
+            headers:
+                -
+                    field: Accept
+                    content: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+                -
+                    field: Accept-Encoding
+                    content: "gzip, deflate"
+            mockBody: postCollection-requestBody.json
+        responses:
+            -
+                name: OK
+                statusCode: *OkStatusCode
+                reason: *OkReason
+                # validationSchema: postCollection-responseBody-validationSchema.json
+                cookies: []
+                headers:
+                    -
+                        field: Content-Type
+                        content: application/json
+                mockBody: postCollection-responseBody.json
+        testCases:
+            -
+                name: Create one instance of Games
+                description: Succesfully creates a new instance of Games
+                url: /games
+                template: testPostMethod.mustache
+                request:
+                    cookies: []
+                    headers:
+                        -
+                            field : "Accept"
+                            content: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+                        -
+                            field: "Accept-Encoding"
+                            content: "gzip, deflate"
+                    body: postCollection-requestBody.json
+                response:
+                    name: OK
+                    statusCode: *OkStatusCode
+                    reason: *OkReason
+                    cookies: []
+                    headers:
+                        -
+                            field: "Content-Type"
+                            content: "application/json"
+                    body: postCollection-responseBody.json
+                    # validationSchema: postCollection-responseBody-validationSchema.json
