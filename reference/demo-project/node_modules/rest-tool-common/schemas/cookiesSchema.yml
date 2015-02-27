@@ -1,0 +1,26 @@
+id: "http://tombenke.github.io/rest-tool-common/schemas/cookiesSchema.yml#"
+$schema: "http://json-schema.org/draft-04/schema#"
+title: cookies
+description: Specification of the cookies
+$ref: "#/definitions/cookies"
+
+definitions:
+
+    cookies:
+        id: "#cookies"
+        description: Specification of the cookies
+        type: array
+        items:
+            $ref: "#cookie"
+
+    cookie:
+        id: "#cookie"
+        description: Specification of one cookie
+        type: object
+        required: [field, content]
+        additionalProperties: false
+        properties:
+            field:
+                type: string
+            content:
+                type: string

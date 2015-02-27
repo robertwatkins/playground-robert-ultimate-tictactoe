@@ -1,0 +1,61 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+title: serviceConfig
+description: |
+  This config file contains the generic parameters for the services.
+type: object
+required:
+    - projectName
+    - apiVersion
+    - author
+    - licence
+    - serviceUrlPrefix
+    - servicePort
+    - baseUrl
+    - servicesRoot
+    - services
+
+properties:
+    projectName:
+        description: The name of the API project
+        type: string
+    apiVersion:
+        description: The actual version number of the API project
+        type: string
+    author:
+        description: The author(s) of the API project
+        type: string
+    licence:
+        description: Defines the type of the licence for the API
+        type: string
+    serviceUrlPrefix:
+        description: The URL prefix commonly used by all the services
+        type: string
+    servicePort:
+        description: |
+            The port where the mock server will provide the services 
+            and the test agents connects to it
+        type: integer
+    baseUrl:
+        description: The base url of the services
+        type: string
+    servicesRoot:
+        description: The path to the folder that is the base for the service descriptor subfolders
+        type: string
+    services:
+        description: A list of usb-folders under 'services' that which contain the active services
+        type: array
+        items:
+            description: The path to the service descriptor under the services folder
+            type: string
+
+    loginCredentials:
+        description: Defines the security credentials for testing.
+        type: object
+        required: [user, pass]
+        properties:
+            user:
+                description: The username used for authentication to the mock server
+                type: string
+            pass:
+                description: The password used for authentication to the mock server
+                type: string
