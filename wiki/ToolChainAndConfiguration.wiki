@@ -5,4 +5,7 @@ These are the tools and configuration used for this project:
    * Anglular.js (include in the <head> tag '<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>')
    * Node.js (http://nodejs.org/download/)
  * rest-tool (http://tombenke.github.io/rest-tool/index.html)
- * UMongo - (optional, a MongoDB UI manager http://edgytech.com/umongo/)
+ * UMongo - (optional, a MongoDB UI manager)
+   * download from http://edgytech.com/umongo/
+   * requires java
+   * unzip and copy to c:\program files(x86) folder
