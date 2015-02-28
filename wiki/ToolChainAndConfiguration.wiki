@@ -1,5 +1,8 @@
 These are the tools and configuration used for this project:
- * Eclipse (though other IDEs may work)
- * Tomcat (though other J2EE servers may work)
- * Maven client
- * more?
+ * MEAN stack (MongoDB, Express.js, Angular.js, Node.js)
+ ** MongoDB (http://www.mongodb.org/downloads)
+ ** Express.js (after installing node.js 'npm install express --save')
+ ** Anglular.js (1.4.x https://angularjs.org/)
+ ** Node.js (http://nodejs.org/download/)
+ * rest-tool (http://tombenke.github.io/rest-tool/index.html)
+
