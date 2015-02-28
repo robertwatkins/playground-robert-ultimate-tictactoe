@@ -1,14 +1,23 @@
+
+=General References=
  * https://docs.oracle.com/cd/E19776-01/820-4867/index.html
  * http://gafferongames.com/
  * http://tombenke.github.io/rest-tool/index.html
 
+=Angular.js= 
+* http://angular.codeschool.com/
 
+=MongoDB=
+http://docs.mongodb.org/manual/crud/
+
+=Node.js=
 For node.js envrionment
  * download and install node.js http://nodejs.org/download/
  * install rest-tool || `sudo npm install -g rest-tool` ||
  * install mocha (test tool)  || `sudo npm install -g mocha` || 
  * run service  || `node server/server.js` || 
 
+=rest-tool=
 Setup demo project (after install steps above)
 {{{
 rest-tool create demo-project
@@ -39,6 +48,3 @@ helpful rest-tool items
  *  || rest-tool docs --update || 
  *  || rest-tool test --update || 
 
-
-Angular.js 
-* http://angular.codeschool.com/
