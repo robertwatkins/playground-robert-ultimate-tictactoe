@@ -4,7 +4,7 @@ These are the tools and configuration used for this project:
      * There are some configuration requirements before the server will run
      * http://docs.mongodb.org/manual/installation/
      * keep default port of 27017
-   * Express.js (after installing node.js 'npm install express --save')
+   * Express.js (http://expressjs.com/starter/installing.html)
    * Anglular.js (include in the <head> tag '<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>')
    * Node.js (http://nodejs.org/download/)
  * rest-tool (http://tombenke.github.io/rest-tool/index.html)
