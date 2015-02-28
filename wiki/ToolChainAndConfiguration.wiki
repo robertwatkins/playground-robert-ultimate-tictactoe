@@ -2,6 +2,6 @@ These are the tools and configuration used for this project:
  * MEAN stack (MongoDB, Express.js, Angular.js, Node.js)
    * MongoDB (http://www.mongodb.org/downloads)
    * Express.js (after installing node.js 'npm install express --save')
-   * Anglular.js (1.4.x include in the <head> tag '<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>')
+   * Anglular.js (include in the <head> tag '<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>')
    * Node.js (http://nodejs.org/download/)
  * rest-tool (http://tombenke.github.io/rest-tool/index.html)
