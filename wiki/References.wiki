@@ -20,6 +20,27 @@ http://docs.mongodb.org/manual/crud/
  * install git ( http://git-scm.com/downloads . If installing on windows, be sure to select option to update windows path)
  * install items listed here https://github.com/TooTallNate/node-gyp/wiki/Visual-Studio-2010-Setup (windows only)
  * npm install -g strongloop
+ * follow basic hello-world here http://loopback.io/getting-started/
+ * connect to a datasource here http://docs.strongloop.com/display/public/LB/Connect+your+API+to+a+data+source
+   * instead of using 'mysql' use 'mongodb' ( http://docs.strongloop.com/display/public/LB/MongoDB+connector )
+   * 'npm install loopback-connector-mongodb --save'
+   * create a hello-world database in the local mongodb
+   * modify server\datasources.json
+{{{
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongodb": {
+    "name": "mongodb",
+    "connector": "mongodb"
+	"database": "hello-world"
+	"host": "127.0.0.1"
+	"url": "mongodb://127.0.0.1:27017/"
+  }
+}
+}}}
 
 
 =Node.js=
