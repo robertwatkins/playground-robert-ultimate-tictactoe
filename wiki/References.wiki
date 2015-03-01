@@ -1,14 +1,19 @@
-
 =General References=
  * https://docs.oracle.com/cd/E19776-01/820-4867/index.html
  * http://gafferongames.com/
  * http://tombenke.github.io/rest-tool/index.html
 
 =Angular.js= 
-* http://angular.codeschool.com/
+* online class to learn AngularJS http://angular.codeschool.com/
 
 =MongoDB=
+* documentation on basic Create/Read/Update/Delete with MongoDB 
 http://docs.mongodb.org/manual/crud/
+
+=Express.js=
+http://expressjs.com/starter/generator.html
+This is related to loopback.js
+http://loopback.io/getting-started/
 
 =Node.js=
 For node.js envrionment
@@ -47,4 +52,3 @@ Check out the work so far:
 helpful rest-tool items
  *  || rest-tool docs --update || 
  *  || rest-tool test --update || 
-
