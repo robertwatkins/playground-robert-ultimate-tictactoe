@@ -15,6 +15,12 @@ http://docs.mongodb.org/manual/crud/
  * This is related to loopback.js
    * http://loopback.io/getting-started/
 
+==Set up demo project using Express.js==
+ * install python ( https://www.python.org/downloads/ )
+ * install git ( http://git-scm.com/downloads )
+ * npm install -g strongloop
+
+
 =Node.js=
 For node.js envrionment
  * download and install node.js http://nodejs.org/download/
