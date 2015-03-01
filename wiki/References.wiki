@@ -18,6 +18,7 @@ http://docs.mongodb.org/manual/crud/
 ==Set up demo project using Express.js==
  * install python ( https://www.python.org/downloads/ . If installing on windows, be sure to select option to update windows path)
  * install git ( http://git-scm.com/downloads . If installing on windows, be sure to select option to update windows path)
+ * install .Net2.0 SDK (windows only)
  * npm install -g strongloop
 
 
