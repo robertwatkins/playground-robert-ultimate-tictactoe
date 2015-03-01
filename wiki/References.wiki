@@ -7,13 +7,13 @@
 * online class to learn AngularJS http://angular.codeschool.com/
 
 =MongoDB=
-* documentation on basic Create/Read/Update/Delete with MongoDB 
+ * documentation on basic Create/Read/Update/Delete with MongoDB 
 http://docs.mongodb.org/manual/crud/
 
 =Express.js=
-* http://expressjs.com/starter/generator.html
-* This is related to loopback.js
-  *http://loopback.io/getting-started/
+ * http://expressjs.com/starter/generator.html
+ * This is related to loopback.js
+   * http://loopback.io/getting-started/
 
 =Node.js=
 For node.js envrionment
