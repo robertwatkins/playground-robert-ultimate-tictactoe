@@ -41,7 +41,15 @@ http://docs.mongodb.org/manual/crud/
   }
 }
 }}}
-
+    * edit server\model-config.json
+{{{
+  ...
+  "person": {
+    "dataSource": "mongodb",
+    "public": true
+  }
+  ...
+}}}
 
 =Node.js=
 For node.js envrionment
