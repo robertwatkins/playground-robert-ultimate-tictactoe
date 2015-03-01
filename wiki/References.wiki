@@ -34,14 +34,14 @@ http://docs.mongodb.org/manual/crud/
   },
   "mongodb": {
     "name": "mongodb",
-    "connector": "mongodb"
-	"database": "hello-world"
-	"host": "127.0.0.1"
+    "connector": "mongodb",
+	"database": "hello-world",
+	"host": "127.0.0.1",
 	"url": "mongodb://127.0.0.1:27017/"
   }
 }
 }}}
-    * edit server\model-config.json
+   * edit server\model-config.json
 {{{
   ...
   "person": {
