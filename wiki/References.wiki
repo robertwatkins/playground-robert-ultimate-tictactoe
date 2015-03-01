@@ -11,8 +11,8 @@
 http://docs.mongodb.org/manual/crud/
 
 =Express.js=
-*http://expressjs.com/starter/generator.html
-*This is related to loopback.js
+* http://expressjs.com/starter/generator.html
+* This is related to loopback.js
   *http://loopback.io/getting-started/
 
 =Node.js=
