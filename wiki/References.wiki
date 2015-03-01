@@ -16,8 +16,8 @@ http://docs.mongodb.org/manual/crud/
    * http://loopback.io/getting-started/
 
 ==Set up demo project using Express.js==
- * install python ( https://www.python.org/downloads/ )
- * install git ( http://git-scm.com/downloads )
+ * install python ( https://www.python.org/downloads/ . If installing on windows, be sure to select option to update windows path)
+ * install git ( http://git-scm.com/downloads . If installing on windows, be sure to select option to update windows path)
  * npm install -g strongloop
 
 
