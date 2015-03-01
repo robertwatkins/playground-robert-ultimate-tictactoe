@@ -50,6 +50,7 @@ http://docs.mongodb.org/manual/crud/
   }
   ...
 }}}
+   *  I saw the data in the 'admin' database, which is unexpected, this is certainly a configuration issue, but the data is being saved
 
 =Node.js=
 For node.js envrionment
