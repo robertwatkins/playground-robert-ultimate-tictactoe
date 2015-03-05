@@ -14,6 +14,7 @@ http://docs.mongodb.org/manual/crud/
  * http://expressjs.com/starter/generator.html
  * This is related to loopback.js
    * http://loopback.io/getting-started/
+   * Training video https://vimeo.com/109596021
 
 ==Set up demo project using Express.js==
  * install python ( https://www.python.org/downloads/ . If installing on windows, be sure to select option to update windows path)
