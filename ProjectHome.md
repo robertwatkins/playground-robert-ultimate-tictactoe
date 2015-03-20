@@ -1,0 +1,1 @@
+scratchpad project for ultimate tictactoe server and client
