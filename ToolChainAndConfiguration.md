@@ -9,7 +9,7 @@ These are the tools and configuration used for this project:
       * http://loopback.io/getting-started/
       * Loopback requires python 2.7 (not python 3.x) and Git
       * special windows instructions are here https://github.com/TooTallNate/node-gyp/wiki/Visual-Studio-2010-Setup
-    * Anglular.js (include in the &lt;head&gt; tag '&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"&gt;&lt;/script&gt;')
+    * Anglular.js (include in the &lt;head&gt; tag '&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js" &gt; &lt;/script &gt; ')
     * Node.js (http://nodejs.org/download/)
   * rest-tool (http://tombenke.github.io/rest-tool/index.html)
     * This was used for an intial demo rest API
