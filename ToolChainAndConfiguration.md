@@ -11,6 +11,9 @@ These are the tools and configuration used for this project:
       * special windows instructions are here https://github.com/TooTallNate/node-gyp/wiki/Visual-Studio-2010-Setup
     * Anglular.js (include in the &lt;head&gt; tag '&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js" &gt; &lt;/script &gt; ')
     * Node.js (http://nodejs.org/download/)
+  * arc
+    * Strongloop offers an API builder called 'arc' it allows you to build an API thorugh a UI
+    * http://docs.strongloop.com/display/APIS/Creating+a+new+API
   * rest-tool (http://tombenke.github.io/rest-tool/index.html)
     * This was used for an intial demo rest API
     * the Express/Loopback components may replace this.
