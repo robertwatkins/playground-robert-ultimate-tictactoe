@@ -1,0 +1,42 @@
+{
+  "name": "Game",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Id": {
+      "type": "string",
+      "id": true,
+      "required": true
+    },
+    "Moves": {
+      "type": [
+        "Move"
+      ]
+    },
+    "Oplayer": {
+      "type": "string",
+      "id": true
+    },
+    "Xplayer": {
+      "type": "string",
+      "id": true
+    },
+    "Winner": {
+      "type": "Player",
+      "id": true
+    },
+    "State": {
+      "type": "string",
+      "required": true,
+      "comments": "\"Not Started\",\"In Progress\",\"Over-With Winner\",\"Over-No Winner\""
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

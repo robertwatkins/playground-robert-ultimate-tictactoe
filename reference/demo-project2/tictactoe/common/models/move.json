@@ -1,0 +1,34 @@
+{
+  "name": "Move",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "SequenceNumber": {
+      "type": "number",
+      "required": true
+    },
+    "Location": {
+      "type": "string",
+      "id": true,
+      "required": true
+    },
+    "PlayersMark": {
+      "type": "string",
+      "required": true
+    },
+    "Player": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "comments": "Player making the move"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}
