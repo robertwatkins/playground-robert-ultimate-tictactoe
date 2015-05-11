@@ -7,7 +7,12 @@
     "validateUpsert": true
   },
   "properties": {
-    "Id": {
+    "State": {
+      "type": "string",
+      "required": true,
+      "comments": "\"Not Started\",\"In Progress\",\"Over-With Winner\",\"Over-No Winner\""
+    },
+    "GameId": {
       "type": "string",
       "id": true,
       "required": true
@@ -19,24 +24,25 @@
     },
     "Oplayer": {
       "type": "string",
-      "id": true
-    },
-    "Xplayer": {
-      "type": "string",
-      "id": true
+      "id": false
     },
     "Winner": {
       "type": "Player",
-      "id": true
+      "id": false
     },
-    "State": {
+    "Xplayer": {
       "type": "string",
-      "required": true,
-      "comments": "\"Not Started\",\"In Progress\",\"Over-With Winner\",\"Over-No Winner\""
+      "id": false
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "Move": {
+      "type": "hasMany",
+      "model": "Move",
+      "foreignKey": "GameId"
+    }
+  },
   "acls": [],
   "methods": []
 }

@@ -11,18 +11,22 @@
       "type": "number",
       "required": true
     },
-    "Location": {
-      "type": "string",
-      "id": true,
-      "required": true
-    },
     "PlayersMark": {
       "type": "string",
       "required": true
     },
+    "GameId": {
+      "type": "string",
+      "required": false
+    },
+    "Location": {
+      "type": "string",
+      "id": false,
+      "required": true
+    },
     "Player": {
       "type": "string",
-      "id": true,
+      "id": false,
       "required": true,
       "comments": "Player making the move"
     }
