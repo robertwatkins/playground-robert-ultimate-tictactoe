@@ -21,3 +21,9 @@ These are the tools and configuration used for this project:
     * download from http://edgytech.com/umongo/
     * requires java
     * unzip and copy to c:\program files(x86) folder
+
+Once you check out from Git:
+ * navigate to the 'tictactoe' folder
+ * 'npm install -g strongloop'
+ * 'slc arc'
+ * This will launch the 'arc' tool for reviewing the API
