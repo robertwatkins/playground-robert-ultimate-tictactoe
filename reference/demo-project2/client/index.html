@@ -3,12 +3,14 @@
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 <!-- <script src="processing.min.js"></script> -->
 <script src="board.js"></script>
-
+<script src="tests.js"></script>
 <body onload="init();">
 
 
 <!-- <canvas data-processing-sources="board.pde"></canvas>-->
-<canvas id="myCanvas" width="500" height="500"></canvas>
+<canvas id="myCanvas" width="400" height="400"></canvas>
+<br/>
+<button onclick="drawXs();">Test X</button> <button onclick="drawOs();">Test O</button> <button onclick="clearBoard();">Clear Board</button><br/>
 <div ng-app="">
   <textarea cols="70" rows="8" ng-model="log"></textarea>
 </div>

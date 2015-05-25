@@ -1,36 +1,161 @@
 function init() {
-	
-
-	drawBoard();
-	//drawMark("X","center");
-	//drawMark("X","upperleft");
-	//drawMark("X","topcenter");
-	//drawMark("X","upperright");
-	//drawMark("X","centerleft");
-	//drawMark("X","centerright");
-	//drawMark("X","bottomleft");
-	//drawMark("X","bottomcenter");
-	//drawMark("X","bottomright");
-	
-	drawMark("X","center");
-	drawMark("X","upperleft");
-	drawMark("X","topcenter");
-	drawMark("X","upperright");
-	drawMark("X","centerleft");
-	drawMark("X","centerright");
-	drawMark("X","bottomleft");
-	drawMark("X","bottomcenter");
-	drawMark("X","bottomright");
-
-	}
-	
-function drawMark( mark,  location) {
 	var canvas = document.getElementById('myCanvas');
     var context = canvas.getContext('2d');
-    var myX = 0;
-    var myY = 0;
-    
-    switch (location) {
+	canvas.addEventListener("mousedown", doMove, false);
+	drawBoard();
+}
+
+function doMove(event){
+	var myX = event.pageX;
+	var myY = event.pageY;
+	console.log("Click at (x,y)=("+myX+","+myY+")");
+	if (myX < 70 && myX > 50 ) {
+		if (myY < 120 && myY > 100) {
+			drawMark("X","upperleft");
+		} else if (myY < 240 && myY > 220 ) {
+			drawMark("X","centerleft");
+		} else if (myY < 360 && myY > 340 ) {
+			drawMark("X", "bottomleft");
+		} else {
+			console.log("No valid move at (x,y)=("+myX+","+myY+")");
+		}
+	} else if (myX < 190 && myX > 170) {
+		if (myY < 120 && myY > 100) {
+			drawMark("X","topcenter");
+		} else if (myY < 240 && myY > 220 ) {
+			drawMark("X","center");
+		} else if (myY < 360 && myY > 340 ) {
+			drawMark("X", "bottomcenter");
+		} else {
+			console.log("No valid move at (x,y)=("+myX+","+myY+")");
+		}
+	} else if (myX < 310 && myX > 290){
+		if (myY < 120 && myY > 100) {
+			drawMark("X","upperright");
+		} else if (myY < 240 && myY > 220 ) {
+			drawMark("X","centerright");
+		} else if (myY < 360 && myY > 340 ) {
+			drawMark("X", "bottomright");
+		} else {
+			console.log("No valid move at (x,y)=("+myX+","+myY+")");
+		}		
+	} else if (myX < 110 && myX > 90) {
+		if (myY < 120 && myY > 100) {
+			drawMark("O","upperleft");
+		} else if (myY < 240 && myY > 220 ) {
+			drawMark("O","centerleft");
+		} else if (myY < 360 && myY > 340 ) {
+			drawMark("O", "bottomleft");
+		} else {
+			console.log("No valid move at (x,y)=("+myX+","+myY+")");
+		}		
+	} else if (myX < 230 && myX > 210) {
+		if (myY < 120 && myY > 100) {
+			drawMark("O","topcenter");
+		} else if (myY < 240 && myY > 220 ) {
+			drawMark("O","center");
+		} else if (myY < 360 && myY > 340 ) {
+			drawMark("O", "bottomcenter");
+		} else {
+			console.log("No valid move at (x,y)=("+myX+","+myY+")");
+		}	
+	} else if (myX < 360 && myX > 340) {
+		if (myY < 120 && myY > 100) {
+			drawMark("O","upperright");
+		} else if (myY < 240 && myY > 220 ) {
+			drawMark("O","centerright");
+		} else if (myY < 360 && myY > 340 ) {
+			drawMark("O", "bottomright");
+		} else {
+			console.log("No valid move at (x,y)=("+myX+","+myY+")");
+		}
+	} else {
+		console.log("No valid move at (x,y)=("+myX+","+myY+")");
+	}
+}
+
+function clearBoard() {
+	clearMark("center")
+	clearMark("upperleft");
+	clearMark("topcenter");
+	clearMark("upperright");
+	clearMark("centerleft");
+	clearMark("centerright");
+	clearMark("bottomleft");
+	clearMark("bottomcenter");
+	clearMark("bottomright");
+}
+
+function clearMark(location) {
+	var canvas = document.getElementById('myCanvas');
+    var context = canvas.getContext('2d');
+	var position = lookupPosition(location);	
+    var myX = position[0];
+    var myY = position[1];
+	context.clearRect(myX-50,myY-50,100,100);
+}
+function drawMoveMark (mark, location) {
+	console.log("Mark:"+mark+" Location:"+location);
+	var canvas = document.getElementById('myCanvas');
+    var context = canvas.getContext('2d');
+    var position = lookupPosition(location);	
+    var myX = position[0];
+    var myY = position[1];
+	
+	if (mark=="X") {
+		//drawing 'X'
+		context.beginPath();
+		context.strokeStyle='#777777';
+		context.lineWidth=5;
+		context.moveTo(myX-25, myY+25);
+		context.lineTo( myX-15, myY+35);
+		context.stroke();
+		context.moveTo(myX-15,myY+25);
+		context.lineTo(myX-25,myY+35);
+		context.stroke();
+	} else {
+		//drawing 'O'
+		context.beginPath();
+		context.strokeStyle='#777777';
+		context.lineWidth=5;
+		context.arc(myX+20,myY+30,5,0,2*Math.PI);
+		context.stroke();
+	}
+}
+function drawMark( mark,  location) {
+	console.log("Mark:"+mark+" Location:"+location);
+	var canvas = document.getElementById('myCanvas');
+    var context = canvas.getContext('2d');
+    var position = lookupPosition(location);	
+    var myX = position[0];
+    var myY = position[1];
+
+	//clear the square
+	clearMark(location);
+	
+	if (mark=="X") {
+		//drawing 'X'
+		context.beginPath();
+		context.strokeStyle='#777777';
+		context.lineWidth=15;
+		context.moveTo(myX-25, myY-25);
+		context.lineTo( myX+25, myY+25);
+		context.stroke();
+		context.moveTo(myX+25,myY-25);
+		context.lineTo(myX-25,myY+25);
+		context.stroke();
+	} else {
+		//drawing 'O'
+		context.beginPath();
+		context.strokeStyle='#777777';
+		context.lineWidth=15;
+		context.arc(myX,myY,27,0,2*Math.PI);
+		context.stroke();
+	}
+}
+
+function lookupPosition(location) {
+	switch (location) {
        case "upperleft":
        		myX=80;
        		myY=80;
@@ -70,42 +195,14 @@ function drawMark( mark,  location) {
        	default:
        		break;
     }
-    
-	//drawing 'X'
-	//context.beginPath();
-	//context.strokeStyle='#777777';
-	//context.lineWidth=15;
-	//context.moveTo(55, 55);
-	//context.lineTo( 105, 105);
-	//context.stroke();
-	//context.moveTo(105,55);
-	//context.lineTo(55,105);
-	//context.stroke();
-	
-	if (mark="X") {
-		//drawing 'X'
-		context.beginPath();
-		context.strokeStyle='#777777';
-		context.lineWidth=15;
-		context.moveTo(myX-25, myY-25);
-		context.lineTo( myX+25, myY+25);
-		context.stroke();
-		context.moveTo(myX+25,myY-25);
-		context.lineTo(myX-25,myY+25);
-		context.stroke();
-	}
-	//drawing 'O'
-	//context.beginPath();
-	//context.strokeStyle='#777777';
-	//context.lineWidth=15;
-	//context.arc(200,80,27,0,2*Math.PI);
-	//context.stroke();
+	return [myX,myY];
 }
 
 function drawBoard() {
 	var canvas = document.getElementById('myCanvas');
     var context = canvas.getContext('2d');
 	//drawing board
+	context.clearRect(0,0,400,400);
 	context.beginPath();
 	context.strokeStyle='#777777';
 	context.lineWidth=15;
@@ -119,7 +216,34 @@ function drawBoard() {
 	context.moveTo(35,140);
 	context.lineTo(370,140);
 	context.stroke();
-	context.moveTo(35,265);
-	context.lineTo(370,265);
+	context.moveTo(35,260);
+	context.lineTo(370,260);
 	context.stroke();
+	context.save();
+	context.restore();
+	
+	//draw Move marks
+	drawMoveMark("X","center");
+	drawMoveMark("X","upperleft");
+	drawMoveMark("X","topcenter");
+	drawMoveMark("X","upperright");
+	drawMoveMark("X","centerleft");
+	drawMoveMark("X","centerright");
+	drawMoveMark("X","bottomleft");
+	drawMoveMark("X","bottomcenter");
+	drawMoveMark("X","bottomright");
+	drawMoveMark("O","center");
+	drawMoveMark("O","upperleft");
+	drawMoveMark("O","topcenter");
+	drawMoveMark("O","upperright");
+	drawMoveMark("O","centerleft");
+	drawMoveMark("O","centerright");
+	drawMoveMark("O","bottomleft");
+	drawMoveMark("O","bottomcenter");
+	drawMoveMark("O","bottomright");
+}
+
+function waitASec(){
+    var now = new Date().getTime();
+    while(new Date().getTime() < now + 1000){ /* do nothing */ } 
 }
