@@ -1,3 +1,8 @@
+
+var gameHost = "http://localhost:3000/api/";
+var xmlRequest = new XMLHttpRequest();
+
+
 function init() {
 	var canvas = document.getElementById('myCanvas');
     var context = canvas.getContext('2d');
@@ -9,62 +14,62 @@ function doMove(event){
 	var myX = event.pageX;
 	var myY = event.pageY;
 	console.log("Click at (x,y)=("+myX+","+myY+")");
-	if (myX < 70 && myX > 50 ) {
-		if (myY < 120 && myY > 100) {
+	if (myX < 80 && myX > 50 ) {
+		if (myY < 130 && myY > 100) {
 			drawMark("X","upperleft");
-		} else if (myY < 240 && myY > 220 ) {
+		} else if (myY < 250 && myY > 220 ) {
 			drawMark("X","centerleft");
-		} else if (myY < 360 && myY > 340 ) {
+		} else if (myY < 370 && myY > 340 ) {
 			drawMark("X", "bottomleft");
 		} else {
 			console.log("No valid move at (x,y)=("+myX+","+myY+")");
 		}
-	} else if (myX < 190 && myX > 170) {
+	} else if (myX < 210 && myX > 170) {
 		if (myY < 120 && myY > 100) {
 			drawMark("X","topcenter");
-		} else if (myY < 240 && myY > 220 ) {
+		} else if (myY < 250 && myY > 220 ) {
 			drawMark("X","center");
-		} else if (myY < 360 && myY > 340 ) {
+		} else if (myY < 370 && myY > 340 ) {
 			drawMark("X", "bottomcenter");
 		} else {
 			console.log("No valid move at (x,y)=("+myX+","+myY+")");
 		}
-	} else if (myX < 310 && myX > 290){
-		if (myY < 120 && myY > 100) {
+	} else if (myX < 320 && myX > 290){
+		if (myY < 130 && myY > 100) {
 			drawMark("X","upperright");
-		} else if (myY < 240 && myY > 220 ) {
+		} else if (myY < 250 && myY > 220 ) {
 			drawMark("X","centerright");
-		} else if (myY < 360 && myY > 340 ) {
+		} else if (myY < 370 && myY > 340 ) {
 			drawMark("X", "bottomright");
 		} else {
 			console.log("No valid move at (x,y)=("+myX+","+myY+")");
 		}		
-	} else if (myX < 110 && myX > 90) {
-		if (myY < 120 && myY > 100) {
+	} else if (myX < 130 && myX > 90) {
+		if (myY < 130 && myY > 100) {
 			drawMark("O","upperleft");
-		} else if (myY < 240 && myY > 220 ) {
+		} else if (myY < 250 && myY > 220 ) {
 			drawMark("O","centerleft");
-		} else if (myY < 360 && myY > 340 ) {
+		} else if (myY < 370 && myY > 340 ) {
 			drawMark("O", "bottomleft");
 		} else {
 			console.log("No valid move at (x,y)=("+myX+","+myY+")");
 		}		
-	} else if (myX < 230 && myX > 210) {
-		if (myY < 120 && myY > 100) {
+	} else if (myX < 250 && myX > 210) {
+		if (myY < 130 && myY > 100) {
 			drawMark("O","topcenter");
-		} else if (myY < 240 && myY > 220 ) {
+		} else if (myY < 250 && myY > 220 ) {
 			drawMark("O","center");
-		} else if (myY < 360 && myY > 340 ) {
+		} else if (myY < 370 && myY > 340 ) {
 			drawMark("O", "bottomcenter");
 		} else {
 			console.log("No valid move at (x,y)=("+myX+","+myY+")");
 		}	
-	} else if (myX < 360 && myX > 340) {
-		if (myY < 120 && myY > 100) {
+	} else if (myX < 380 && myX > 340) {
+		if (myY < 130 && myY > 100) {
 			drawMark("O","upperright");
-		} else if (myY < 240 && myY > 220 ) {
+		} else if (myY < 250 && myY > 220 ) {
 			drawMark("O","centerright");
-		} else if (myY < 360 && myY > 340 ) {
+		} else if (myY < 370 && myY > 340 ) {
 			drawMark("O", "bottomright");
 		} else {
 			console.log("No valid move at (x,y)=("+myX+","+myY+")");
@@ -72,6 +77,11 @@ function doMove(event){
 	} else {
 		console.log("No valid move at (x,y)=("+myX+","+myY+")");
 	}
+}
+
+
+function updateTranscript(author, message){
+  document.getElementById("log").value += "\n" + author + ":\n" + message
 }
 
 function clearBoard() {
@@ -124,6 +134,13 @@ function drawMoveMark (mark, location) {
 }
 function drawMark( mark,  location) {
 	console.log("Mark:"+mark+" Location:"+location);
+	updateTranscript("System", "Mark:"+mark+" Location:"+location);
+	
+	myMove='{"SequenceNumber": "0","PlayersMark": "'+mark+'","GameId": "1","Location": "'+location+'","Player": "1"}';
+	xmlRequest.open("PUT",gameHost+"Games/0/Move/1",false);
+	xmlRequest.send(myMove);
+	updateTranscript("System",xmlRequest.status+ "\n" + xmlRequest.statusText);
+	
 	var canvas = document.getElementById('myCanvas');
     var context = canvas.getContext('2d');
     var position = lookupPosition(location);	
