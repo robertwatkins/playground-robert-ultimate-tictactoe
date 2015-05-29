@@ -17,11 +17,6 @@
       "id": true,
       "required": true
     },
-    "Moves": {
-      "type": [
-        "Move"
-      ]
-    },
     "Oplayer": {
       "type": "string",
       "id": false
